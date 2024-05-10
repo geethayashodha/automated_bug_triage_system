@@ -1,0 +1,22 @@
+{% extends 'html/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div style="margin-top: 40px;">
+    <div style="width: 400px; margin: 0 auto; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+        <div style="background-color: beige; padding: 20px;">
+            <h4 style="margin-bottom: 20px;">Login</h4>
+            <form method="post">
+                {% csrf_token %}
+                <input type="text" name="username" style="width: 100%; padding: 10px; margin-bottom: 10px;" placeholder="Username">
+                <input type="password" name="password" style="width: 100%; padding: 10px; margin-bottom: 10px;" placeholder="Password">
+                <div style="display: flex; justify-content: space-between;">
+                    <a href="{% url 'rg' %}" style="text-decoration: none; color: #17a2b8;">New User?</a>
+                    <input type="submit" value="Login" style="background-color: #28a745; color: #fff; border: none; padding: 10px 20px; cursor: pointer;">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

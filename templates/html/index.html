@@ -1,0 +1,21 @@
+{% extends 'html/base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div>
+    {% if not user.is_authenticated %}
+    <h4>BUG TRIAGE SYSTEM</h4>
+    <div style="margin-top: 20px;">
+        <a href="{% url 'lg' %}" style="padding: 8px 16px; margin-right: 10px;">Login</a>
+        <a href="{% url 'rg' %}" style="padding: 8px 16px; margin-right: 10px;">Register</a>
+
+    </div>
+    {% else %}
+        {% if request.user.role == "2" and not request.user.is_superuser %}
+            <ul>
+                <li><a href="{% url 'bg' %}">Report</a></li>
+                <li><a href="{% url 'lgt' %}">Logout</a></li>
+            </ul>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}

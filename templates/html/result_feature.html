@@ -1,0 +1,10 @@
+{% extends 'html/base.html' %}
+{% block content %}
+<div style="margin-top: 40px; margin-left: auto; margin-right: auto; width: 500px;">
+    <div style="border: 1px solid #ccc; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        {% if prediction %}
+            <p>Prediction: {{ prediction }}</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

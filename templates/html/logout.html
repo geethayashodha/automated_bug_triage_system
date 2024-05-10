@@ -1,0 +1,17 @@
+{% extends 'html/base.html' %}
+{% block title %}Logout{% endblock %}
+{% block content %}
+<div style="margin-top: 20px;">
+    <div style="width: 50%; margin: auto;">
+        <div style="border: 1px solid #ccc; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <div style="background-color: #f0f0f0; padding: 10px;">
+                <h4 style="margin: 0;">Logout</h4>
+            </div>
+            <div style="padding: 20px;">
+                <h6>Are you sure you want to logout?</h6>
+                <a href="{% url 'lg' %}" style="text-decoration: none; color: #007bff; border: 1px solid #007bff; border-radius: 3px; padding: 8px 16px; margin-right: 10px;">Login Again</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
